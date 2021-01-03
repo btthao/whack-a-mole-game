@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+body {
+    background-color: rgb(77, 122, 138);
+    padding: 30px 10px;
+    color: white;
+    font-size: 18px;
+    min-width: 300px;
+}
+
+#start,
+#pause {
+    background-color: white;
+    outline: none;
+    border: 3px solid black;
+    width: 120px;
+    height: 35px;
+    font-size: 16px;
+    margin: 15px 6px;
+    cursor: pointer;
+}
+
+#pause {
+    display: none;
+}
+
+.time-bar {
+    margin: auto;
+    width: 50%;
+    height: 22px;
+    color: black;
+    border: 3px black solid;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.time {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 0;
+    height: 100%;
+    background-color: white;
+    border-radius: 12px;
+}
+
+.game-area {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    width: 500px;
+    height: 380px;
+    margin: 20px auto 0;
+}
+
+.area {
+    width: 120px;
+    height: 90px;
+    border: solid black 3px;
+    border-radius: 50%;
+    margin: 16px;
+    background: white;
+}
+
+.tick {
+    font-size: 60px;
+    top: 50%;
+    color: rgb(165, 145, 32);
+    display: none;
+}
+
+.correct {
+    display: block;
+    animation: show 1s 1 forwards;
+}
+
+@keyframes show {
+    0% {
+        transform: translateY(0);
+    }
+    70% {
+        transform: translateY(-40px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.covid {
+    background-image: url(./virus.png);
+    background-position: center;
+    background-size: cover;
+}
+
+@media screen and (max-width: 600px) {
+    .game-area {
+        width: 300px;
+        height: 250px;
+    }
+    .area {
+        width: 90px;
+        height: 60px;
+        margin: 5px;
+    }
+}
